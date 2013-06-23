@@ -130,7 +130,7 @@
 							<targetPlatform id="cdt.managedbuild.target.gnu.platform.exe.release.1714230353" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.exe.release"/>
 							<builder buildPath="${workspace_loc:/test2/Release}" id="cdt.managedbuild.target.gnu.builder.exe.release.1254837131" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.exe.release"/>
 							<tool id="cdt.managedbuild.tool.gnu.archiver.base.515520975" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
-							<tool command="g++ -m32" id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1395055631" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release">
+							<tool command="g++ -fPIC" id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1395055631" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release">
 								<option id="gnu.cpp.compiler.exe.release.option.optimization.level.1386769439" name="Optimization Level" superClass="gnu.cpp.compiler.exe.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.exe.release.option.debugging.level.1737481951" name="Debug Level" superClass="gnu.cpp.compiler.exe.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1471143730" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
@@ -149,7 +149,7 @@
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.release.1868903151" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.release">
 								<option defaultValue="true" id="gnu.c.link.option.shared.127211054" name="Shared (-shared)" superClass="gnu.c.link.option.shared" valueType="boolean"/>
 							</tool>
-							<tool command="g++ -m32" id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.28123030" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release">
+							<tool command="g++ -fPIC" id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.28123030" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release">
 								<option id="gnu.cpp.link.option.libs.2010693688" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="CommunicationXLib"/>
 									<listOptionValue builtIn="false" value="CommonXLib"/>

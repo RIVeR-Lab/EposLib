@@ -109,7 +109,7 @@
 							<targetPlatform id="cdt.managedbuild.target.gnu.platform.lib.release.139565939" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.lib.release"/>
 							<builder buildPath="${workspace_loc:/CommunicationXLib/Release}" id="cdt.managedbuild.target.gnu.builder.lib.release.1354477583" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.lib.release"/>
 							<tool id="cdt.managedbuild.tool.gnu.archiver.lib.release.1133196956" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.lib.release"/>
-							<tool command="g++ -m32" id="cdt.managedbuild.tool.gnu.cpp.compiler.lib.release.1109553783" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.lib.release">
+							<tool command="g++ -fPIC" id="cdt.managedbuild.tool.gnu.cpp.compiler.lib.release.1109553783" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.lib.release">
 								<option id="gnu.cpp.compiler.lib.release.option.optimization.level.2132526415" name="Optimization Level" superClass="gnu.cpp.compiler.lib.release.option.optimization.level" value="gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.lib.release.option.debugging.level.1112583312" name="Debug Level" superClass="gnu.cpp.compiler.lib.release.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.348740725" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
