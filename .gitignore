@@ -13,5 +13,5 @@
 *.a
 
 # Release/Debug Directories in Eclipse
-/*/Build/
-/*/Release/
+Build/
+Release/
