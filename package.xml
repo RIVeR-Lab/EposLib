@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>EposLib</name>
+  <version>0.0.0</version>
+  <description>A catkin version of the EposCmd library</description>
+  <url>http://wiki.ros.org/EposLib</url>
+
+  <maintainer email="mwills@wpi.edu">Mitchell Wills</maintainer>
+
+  <license>NONE</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+</package>

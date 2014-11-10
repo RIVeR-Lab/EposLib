@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include <CommunicationModel/Interface/Classes/Gateway/USB/Classes/RxBufferThread.h>
-
+#include <unistd.h>
 #include <CommunicationModel/Interface/Classes/Gateway/USB/GatewayUSBToFtd2xxDrv.h>
 
 CRxBufferThread::CRxBufferThread(void)
