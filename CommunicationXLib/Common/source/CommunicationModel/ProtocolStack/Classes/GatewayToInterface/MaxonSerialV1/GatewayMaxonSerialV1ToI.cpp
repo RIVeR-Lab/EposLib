@@ -328,7 +328,7 @@ BOOL CGatewayMaxonSerialV1ToI::SendFrame(CInterfaceManagerBase* pInterfaceManage
 
 BOOL CGatewayMaxonSerialV1ToI::ReceiveFrame(CInterfaceManagerBase* pInterfaceManager,HANDLE hI_Handle,HANDLE hTransactionHandle,BYTE* puOpCode,BYTE* puLen,void** ppDataBuffer,DWORD* pdDataBufferLength,WORD* pwCrc,DWORD dTimeout,CErrorInfo* pErrorInfo)
 {
-	DWORD	startTime,time;
+	unsigned long	startTime,time;
 	BOOL	oFirstCharReceived;
 	BYTE	uOpCode = 0;
 	BYTE	uLen;

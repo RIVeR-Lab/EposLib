@@ -33,7 +33,7 @@ CCommandSetProfileVelocityMode_VCS_Drive::~CCommandSetProfileVelocityMode_VCS_Dr
     DeleteCommands();
 }
 
-BOOL CCommandSetProfileVelocityMode_VCS_Drive::VCS_GetTargetVelocity(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long *p_plTargetVelocity, CErrorInfo* p_pErrorInfo)
+BOOL CCommandSetProfileVelocityMode_VCS_Drive::VCS_GetTargetVelocity(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int *p_plTargetVelocity, CErrorInfo* p_pErrorInfo)
 {
     BOOL oResult = FALSE;
 
@@ -97,7 +97,7 @@ BOOL CCommandSetProfileVelocityMode_VCS_Drive::VCS_HaltVelocityMovement(CLayerMa
     return oResult;
 }
 
-BOOL CCommandSetProfileVelocityMode_VCS_Drive::VCS_MoveWithVelocity(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long p_lTargetVelocity, CErrorInfo* p_pErrorInfo)
+BOOL CCommandSetProfileVelocityMode_VCS_Drive::VCS_MoveWithVelocity(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int p_lTargetVelocity, CErrorInfo* p_pErrorInfo)
 {
     BOOL oResult = FALSE;
 

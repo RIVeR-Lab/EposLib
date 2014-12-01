@@ -199,7 +199,7 @@ BOOL CGatewayDriveToEsam::Process_MoveToPosition(CCommand_VCS* p_pCommand, CDevi
 
     BYTE ubPortNumber(0);
     BYTE ubNodeId(0);
-    long lTargetPosition;
+    int lTargetPosition;
     BOOL oAbsolute;
     BOOL oImmediately;
     CErrorInfo errorInfo;
@@ -1123,9 +1123,9 @@ BOOL CGatewayDriveToEsam::Process_GetHomingParameter(CCommand_VCS* p_pCommand, C
     DWORD ulHomingAcceleration = 0;
     DWORD ulSpeedSwitch = 0;
     DWORD ulSpeedIndex = 0;
-    long lHomeOffset = 0;
+    int lHomeOffset = 0;
     WORD usCurrentThreshold = 0;
-    long lHomePosition = 0;
+    int lHomePosition = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -1223,9 +1223,9 @@ BOOL CGatewayDriveToEsam::Process_SetHomingParameter(CCommand_VCS* p_pCommand, C
     DWORD ulHomingAcceleration = 0;
     DWORD ulSpeedSwitch = 0;
     DWORD ulSpeedIndex = 0;
-    long lHomeOffset = 0;
+    int lHomeOffset = 0;
     WORD usCurrentThreshold = 0;
-    long lHomePosition = 0;
+    int lHomePosition = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -1757,7 +1757,7 @@ BOOL CGatewayDriveToEsam::Process_GetPositionIs(CCommand_VCS* p_pCommand, CDevic
 
     BYTE ubPortNumber(0);
     BYTE ubNodeId(0);
-    long lPositionIs = 0;
+    int lPositionIs = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -1791,7 +1791,7 @@ BOOL CGatewayDriveToEsam::Process_GetVelocityIs(CCommand_VCS* p_pCommand, CDevic
 
     BYTE ubPortNumber(0);
     BYTE ubNodeId(0);
-    long lVelocityIs = 0;
+    int lVelocityIs = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -1824,7 +1824,7 @@ BOOL CGatewayDriveToEsam::Process_GetPositionMust(CCommand_VCS* p_pCommand, CDev
 
     BYTE ubPortNumber(0);
     BYTE ubNodeId(0);
-    long lPositionMust = 0;
+    int lPositionMust = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -1857,7 +1857,7 @@ BOOL CGatewayDriveToEsam::Process_SetPositionMust(CCommand_VCS* p_pCommand, CDev
 
     BYTE ubPortNumber(0);
     BYTE ubNodeId(0);
-    long lPositionMust;
+    int lPositionMust;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -1949,7 +1949,7 @@ BOOL CGatewayDriveToEsam::Process_GetTargetPosition(CCommand_VCS* p_pCommand, CD
 
     BYTE ubPortNumber(0);
     BYTE ubNodeId(0);
-    long lTargetPosition;
+    int lTargetPosition;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -2069,7 +2069,7 @@ BOOL CGatewayDriveToEsam::Process_GetTargetVelocity(CCommand_VCS* p_pCommand, CD
 
     BYTE ubPortNumber(0);
     BYTE ubNodeId(0);
-    long lTargetVelocity = 0;
+    int lTargetVelocity = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -2182,7 +2182,7 @@ BOOL CGatewayDriveToEsam::Process_MoveWithVelocity(CCommand_VCS* p_pCommand, CDe
 
     BYTE ubPortNumber(0);
     BYTE ubNodeId(0);
-    long lTargetVelocity;
+    int lTargetVelocity;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3142,7 +3142,7 @@ BOOL CGatewayDriveToEsam::Process_GetVelocityMust(CCommand_VCS* p_pCommand, CDev
 
     BYTE ubPortNumber(0);
     BYTE ubNodeId(0);
-    long lVelocityMust = 0;
+    int lVelocityMust = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3175,7 +3175,7 @@ BOOL CGatewayDriveToEsam::Process_SetVelocityMust(CCommand_VCS* p_pCommand, CDev
 
     BYTE ubPortNumber(0);
     BYTE ubNodeId(0);
-    long lVelocityMust;
+    int lVelocityMust;
     CErrorInfo errorInfo;
 
     if(p_pCommand)

@@ -1377,9 +1377,9 @@ void CCommand_VCS_Drive::SetDefaultParameter_GetHomingParameter()
     DWORD ulHomingAcceleration = 0;
     DWORD ulSpeedSwitch = 0;
     DWORD ulSpeedIndex = 0;
-    long lHomeOffset = 0;
+    int lHomeOffset = 0;
     WORD usCurrentThreshold = 0;
-    long lHomePosition = 0;
+    int lHomePosition = 0;
 
     //Parameter
 
@@ -1397,9 +1397,9 @@ void CCommand_VCS_Drive::SetDefaultParameter_SetHomingParameter()
     DWORD ulHomingAcceleration = 0;
     DWORD ulSpeedSwitch = 0;
     DWORD ulSpeedIndex = 0;
-    long lHomeOffset = 0;
+    int lHomeOffset = 0;
     WORD usCurrentThreshold = 0;
-    long lHomePosition = 0;
+    int lHomePosition = 0;
 
     //Parameter
     SetParameterData(0, &ulHomingAcceleration, sizeof(ulHomingAcceleration));
@@ -1418,7 +1418,7 @@ void CCommand_VCS_Drive::SetDefaultParameter_StopHoming()
 
 void CCommand_VCS_Drive::SetDefaultParameter_DefinePosition()
 {
-    long lHomePosition = 0;
+    int lHomePosition = 0;
 
     //Parameter
     SetParameterData(0, &lHomePosition, sizeof(lHomePosition));
@@ -1581,7 +1581,7 @@ void CCommand_VCS_Drive::SetDefaultParameter_ReadPositionMarkerCounter()
 void CCommand_VCS_Drive::SetDefaultParameter_ReadPositionMarkerCapturedPosition()
 {
     WORD usCounterIndex = 0;
-    long lCapturedPosition = 0;
+    int lCapturedPosition = 0;
 
     //Parameter
     SetParameterData(0, &usCounterIndex, sizeof(usCounterIndex));
@@ -1626,7 +1626,7 @@ void CCommand_VCS_Drive::SetDefaultParameter_GetMovementState()
 
 void CCommand_VCS_Drive::SetDefaultParameter_GetPositionIs()
 {
-    long lPositionIs = 0;
+    int lPositionIs = 0;
 
     //Parameter
 
@@ -1636,7 +1636,7 @@ void CCommand_VCS_Drive::SetDefaultParameter_GetPositionIs()
 
 void CCommand_VCS_Drive::SetDefaultParameter_GetVelocityIs()
 {
-    long lVelocityIs = 0;
+    int lVelocityIs = 0;
 
     //Parameter
 
@@ -1646,7 +1646,7 @@ void CCommand_VCS_Drive::SetDefaultParameter_GetVelocityIs()
 
 void CCommand_VCS_Drive::SetDefaultParameter_GetVelocityIsAveraged()
 {
-    long lVelocityIsAveraged = 0;
+    int lVelocityIsAveraged = 0;
 
     //ReturnParameter
     SetReturnParameterData(0, &lVelocityIsAveraged, sizeof(lVelocityIsAveraged));
@@ -1654,7 +1654,7 @@ void CCommand_VCS_Drive::SetDefaultParameter_GetVelocityIsAveraged()
 
 void CCommand_VCS_Drive::SetDefaultParameter_GetPositionMust()
 {
-    long lPositionMust = 0;
+    int lPositionMust = 0;
 
     //Parameter
 
@@ -1664,7 +1664,7 @@ void CCommand_VCS_Drive::SetDefaultParameter_GetPositionMust()
 
 void CCommand_VCS_Drive::SetDefaultParameter_SetPositionMust()
 {
-    long lPositionMust = 0;
+    int lPositionMust = 0;
 
     //Parameter
     SetParameterData(0, &lPositionMust, sizeof(lPositionMust));
@@ -1686,7 +1686,7 @@ void CCommand_VCS_Drive::SetDefaultParameter_GetPositionProfile()
 
 void CCommand_VCS_Drive::SetDefaultParameter_GetTargetPosition()
 {
-    long lTargetPosition = 0;
+    int lTargetPosition = 0;
 
     //Parameter
 
@@ -1702,7 +1702,7 @@ void CCommand_VCS_Drive::SetDefaultParameter_HaltPositionMovement()
 
 void CCommand_VCS_Drive::SetDefaultParameter_MoveToPosition()
 {
-    long lTargetPosition = 1000;
+    int lTargetPosition = 1000;
     BOOL oAbsolute = FALSE;
     BOOL oImmediately = TRUE;
 
@@ -1742,7 +1742,7 @@ void CCommand_VCS_Drive::SetDefaultParameter_DisablePositionWindow()
 
 void CCommand_VCS_Drive::SetDefaultParameter_GetTargetVelocity()
 {
-    long lTargetVelocity = 0;
+    int lTargetVelocity = 0;
 
     //Parameter
 
@@ -1770,7 +1770,7 @@ void CCommand_VCS_Drive::SetDefaultParameter_HaltVelocityMovement()
 
 void CCommand_VCS_Drive::SetDefaultParameter_MoveWithVelocity()
 {
-    long lTargetVelocity = 0;
+    int lTargetVelocity = 0;
 
     //Parameter
     SetParameterData(0, &lTargetVelocity, sizeof(lTargetVelocity));
@@ -1870,7 +1870,7 @@ void CCommand_VCS_Drive::SetDefaultParameter_SetQuickStopState()
 
 void CCommand_VCS_Drive::SetDefaultParameter_GetVelocityMust()
 {
-    long lVelocityMust = 0;
+    int lVelocityMust = 0;
 
     //Parameter
 
@@ -1880,7 +1880,7 @@ void CCommand_VCS_Drive::SetDefaultParameter_GetVelocityMust()
 
 void CCommand_VCS_Drive::SetDefaultParameter_SetVelocityMust()
 {
-    long lVelocityMust = 0;
+    int lVelocityMust = 0;
 
     //Parameter
     SetParameterData(0, &lVelocityMust, sizeof(lVelocityMust));

@@ -24,8 +24,8 @@ class CCommandSetMotionInfo_VCS_Drive : public CCommandSetBase_VCS
 {
 public:
     BOOL VCS_GetMovementState(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, BOOL* p_poTargetReached, CErrorInfo* p_pErrorInfo = NULL);
-    BOOL VCS_GetVelocityIs(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long *p_plVelocityIs, CErrorInfo* p_pErrorInfo = NULL);
-    BOOL VCS_GetPositionIs(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long *p_plPositionIs, CErrorInfo* p_pErrorInfo = NULL);
+    BOOL VCS_GetVelocityIs(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int *p_plVelocityIs, CErrorInfo* p_pErrorInfo = NULL);
+    BOOL VCS_GetPositionIs(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int *p_plPositionIs, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_GetCurrentIs(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, short* p_psCurrentIs, CErrorInfo* p_pErrorInfo = NULL);
 
     CXXMLFile::CElementPart* StoreToXMLFile(CXXMLFile* p_pFile, CXXMLFile::CElementPart* p_pParentElement);

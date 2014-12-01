@@ -166,7 +166,7 @@ BOOL CCommandSetOutputsPositionCompare_VCS_Drive2::VCS_DisablePositionCompare(CL
     return oResult;
 }
 
-BOOL CCommandSetOutputsPositionCompare_VCS_Drive2::VCS_SetPositionCompareReferencePosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long p_lReferencePosition, CErrorInfo* p_pErrorInfo)
+BOOL CCommandSetOutputsPositionCompare_VCS_Drive2::VCS_SetPositionCompareReferencePosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int p_lReferencePosition, CErrorInfo* p_pErrorInfo)
 {
     BOOL oResult = FALSE;
 

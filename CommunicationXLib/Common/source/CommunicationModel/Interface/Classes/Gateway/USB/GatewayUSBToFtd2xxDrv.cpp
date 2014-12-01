@@ -391,7 +391,7 @@ BOOL CGatewayUSBToFtd2xxDrv::OpenPort(CStdString strPortName, CErrorInfo* pError
 
     CMmcSingleLock lock(CFtd2xxDeviceInfoHandling::GetSyncInstance(), TRUE);
 
-	unsigned long lResult = 0;
+	unsigned int lResult = 0;
 	DWORD ulLocationId = 0;
     CStdString strSerialNumber;
     
@@ -762,7 +762,7 @@ BOOL CGatewayUSBToFtd2xxDrv::ReadData(void* p_pDataBuffer, DWORD p_dNbOfBytesToR
 	DWORD dTotalNumberOfByteRead(0);
 	void* pDataBuffer(0);
 	DWORD ulRetryCount(0);
-	long lResult = 0;
+	int lResult = 0;
 
     //ResetErrorInfo
     if(p_pErrorInfo) p_pErrorInfo->Reset();

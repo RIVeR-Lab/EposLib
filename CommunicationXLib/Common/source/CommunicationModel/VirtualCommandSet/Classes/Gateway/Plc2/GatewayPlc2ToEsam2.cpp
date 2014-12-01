@@ -1949,13 +1949,13 @@ BOOL CGatewayPlc2ToEsam2::Process_SetProcessInputBit(CCommand_VCS* p_pCommand, C
                 }
                 else if(PIT_PROCESS_INPUT_INT32 == usProcessInputType)
                 {
-                    long lData = 0;
+                    int lData = 0;
 
-                    if(ReadInt32Object(p_pManager, p_hDCS_Handle, p_hTransactionHandle, usNetworkId, ubNodeId, INDEX_PROCESS_OUTPUT_INT32, ubElementNumber, (long*)&lData, &errorInfo))
+                    if(ReadInt32Object(p_pManager, p_hDCS_Handle, p_hTransactionHandle, usNetworkId, ubNodeId, INDEX_PROCESS_OUTPUT_INT32, ubElementNumber, (int*)&lData, &errorInfo))
                     {
                         if(SetBitState((BYTE*)&lData, sizeof(lData), ubBitNumber, ubBitState, &errorInfo))
                         {
-                            oResult = WriteInt32Object(p_pManager, p_hDCS_Handle, p_hTransactionHandle, usNetworkId, ubNodeId, INDEX_PROCESS_INPUT_INT32, ubElementNumber, (long)lData, &errorInfo);
+                            oResult = WriteInt32Object(p_pManager, p_hDCS_Handle, p_hTransactionHandle, usNetworkId, ubNodeId, INDEX_PROCESS_INPUT_INT32, ubElementNumber, (int)lData, &errorInfo);
                         }
                     }
                 }
@@ -2085,9 +2085,9 @@ BOOL CGatewayPlc2ToEsam2::Process_GetProcessOutputBit(CCommand_VCS* p_pCommand, 
                 }
                 else if(PIT_PROCESS_OUTPUT_INT32 == usProcessOutputType)
                 {
-                    long lData = 0;
+                    int lData = 0;
 
-                    if(ReadInt32Object(p_pManager, p_hDCS_Handle, p_hTransactionHandle, usNetworkId, ubNodeId, INDEX_PROCESS_OUTPUT_INT32, ubElementNumber, (long*)&lData, &errorInfo))
+                    if(ReadInt32Object(p_pManager, p_hDCS_Handle, p_hTransactionHandle, usNetworkId, ubNodeId, INDEX_PROCESS_OUTPUT_INT32, ubElementNumber, (int*)&lData, &errorInfo))
                     {
                         oResult = GetBitState((BYTE*)&lData, sizeof(lData), ubBitNumber, ubBitState, &errorInfo);
                     }

@@ -59,7 +59,7 @@ BOOL CCommandSetProfilePositionMode_VCS_Drive2::VCS_GetPositionProfile(CLayerMan
     return oResult;
 }
 
-BOOL CCommandSetProfilePositionMode_VCS_Drive2::VCS_GetTargetPosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long *p_plTargetPosition, CErrorInfo* p_pErrorInfo)
+BOOL CCommandSetProfilePositionMode_VCS_Drive2::VCS_GetTargetPosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int *p_plTargetPosition, CErrorInfo* p_pErrorInfo)
 {
     BOOL oResult = FALSE;
 
@@ -100,7 +100,7 @@ BOOL CCommandSetProfilePositionMode_VCS_Drive2::VCS_HaltPositionMovement(CLayerM
     return oResult;
 }
 
-BOOL CCommandSetProfilePositionMode_VCS_Drive2::VCS_MoveToPosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long p_lTargetPosition, BOOL p_oAbsolute, BOOL p_oImmediately, CErrorInfo* p_pErrorInfo)
+BOOL CCommandSetProfilePositionMode_VCS_Drive2::VCS_MoveToPosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int p_lTargetPosition, BOOL p_oAbsolute, BOOL p_oImmediately, CErrorInfo* p_pErrorInfo)
 {
     BOOL oResult = FALSE;
 

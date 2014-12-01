@@ -28,7 +28,7 @@ public:
 protected:
     BOOL ReadInt8Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, __int8* pbValue, CErrorInfo* pErrorInfo = NULL);
     BOOL ReadInt16Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, short* piValue, CErrorInfo* pErrorInfo = NULL);
-    BOOL ReadInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, long* plValue, CErrorInfo* pErrorInfo = NULL);
+    BOOL ReadInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, int* plValue, CErrorInfo* pErrorInfo = NULL);
     BOOL ReadUInt8Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, BYTE* puValue, CErrorInfo* pErrorInfo = NULL);
     BOOL ReadUInt16Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, WORD* pwValue, CErrorInfo* pErrorInfo = NULL);
     BOOL ReadUInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, DWORD* pdValue, CErrorInfo* pErrorInfo = NULL);
@@ -37,7 +37,7 @@ protected:
 
     BOOL WriteInt8Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, __int8 bValue, CErrorInfo* pErrorInfo = NULL);
     BOOL WriteInt16Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, short iValue, CErrorInfo* pErrorInfo = NULL);
-    BOOL WriteInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, long lValue, CErrorInfo* pErrorInfo = NULL);
+    BOOL WriteInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, int lValue, CErrorInfo* pErrorInfo = NULL);
     BOOL WriteUInt8Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, BYTE uValue, CErrorInfo* pErrorInfo = NULL);
     BOOL WriteUInt16Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, WORD wValue, CErrorInfo* pErrorInfo = NULL);
     BOOL WriteUInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, DWORD dValue, CErrorInfo* pErrorInfo = NULL);

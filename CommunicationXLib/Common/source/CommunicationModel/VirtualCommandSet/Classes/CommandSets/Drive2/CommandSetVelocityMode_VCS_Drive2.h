@@ -21,8 +21,8 @@ class CLayerManagerBase;
 class CCommandSetVelocityMode_VCS_Drive2 : public CCommandSetBase_VCS
 {
 public:
-    BOOL VCS_GetVelocityMust(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long *p_plVelocityMust, CErrorInfo* p_pErrorInfo = NULL);
-    BOOL VCS_SetVelocityMust(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long p_lVelocityMust, CErrorInfo* p_pErrorInfo = NULL);
+    BOOL VCS_GetVelocityMust(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int *p_plVelocityMust, CErrorInfo* p_pErrorInfo = NULL);
+    BOOL VCS_SetVelocityMust(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int p_lVelocityMust, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_ActivateAnalogVelocitySetpoint(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, WORD p_usAnalogInputNumber, float fScaling, short sOffset, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_DeactivateAnalogVelocitySetpoint(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, WORD p_usAnalogInputNumber, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_EnableAnalogVelocitySetpoint(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, CErrorInfo* p_pErrorInfo = NULL);

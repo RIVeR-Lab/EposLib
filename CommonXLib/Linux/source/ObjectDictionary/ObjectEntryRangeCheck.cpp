@@ -185,7 +185,7 @@ BOOL CObjectEntryRangeCheck::CreateSafeGetVoidDataContainer(CObjectEntry* p_pObj
 	    return oRetVal;
 }
 
-BOOL CObjectEntryRangeCheck::CreateSafeGetVoidDataContainer(CObjectEntry* p_pObjectEntry, long p_lValue, void*& p_pVoidContainer, DWORD& p_rSizeOfVoidContainer, BOOL p_oShowMsg)
+BOOL CObjectEntryRangeCheck::CreateSafeGetVoidDataContainer(CObjectEntry* p_pObjectEntry, int p_lValue, void*& p_pVoidContainer, DWORD& p_rSizeOfVoidContainer, BOOL p_oShowMsg)
 {
         BOOL oRetVal(FALSE);
 

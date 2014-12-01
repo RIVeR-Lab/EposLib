@@ -257,7 +257,7 @@ BOOL CGatewayDriveToEpos::Process_MoveToPosition(CCommand_VCS* p_pCommand, CDevi
     BOOL oResult = TRUE;
 
     BYTE ubNodeId(0);
-    long lTargetPosition;
+    int lTargetPosition;
     BOOL oAbsolute;
     BOOL oImmediately;
     CErrorInfo errorInfo;
@@ -1705,9 +1705,9 @@ BOOL CGatewayDriveToEpos::Process_GetHomingParameter(CCommand_VCS* p_pCommand, C
     DWORD ulHomingAcceleration = 0;
     DWORD ulSpeedSwitch = 0;
     DWORD ulSpeedIndex = 0;
-    long lHomeOffset = 0;
+    int lHomeOffset = 0;
     WORD usCurrentThreshold = 0;
-    long lHomePosition = 0;
+    int lHomePosition = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -1805,9 +1805,9 @@ BOOL CGatewayDriveToEpos::Process_SetHomingParameter(CCommand_VCS* p_pCommand, C
     DWORD ulHomingAcceleration = 0;
     DWORD ulSpeedSwitch = 0;
     DWORD ulSpeedIndex = 0;
-    long lHomeOffset = 0;
+    int lHomeOffset = 0;
     WORD usCurrentThreshold = 0;
-    long lHomePosition = 0;
+    int lHomePosition = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -1902,7 +1902,7 @@ BOOL CGatewayDriveToEpos::Process_DefinePosition(CCommand_VCS* p_pCommand, CDevi
     BOOL oResult = TRUE;
 
     CErrorInfo errorInfo;
-    long lHomePosition = 0;
+    int lHomePosition = 0;
     BYTE ubNodeId(0);
 
     if(p_pCommand)
@@ -2655,7 +2655,7 @@ BOOL CGatewayDriveToEpos::Process_ReadPositionMarkerCapturedPosition(CCommand_VC
     WORD usSubIndex;
 
     BYTE ubNodeId(0);
-    long lPositionMarkerCapturedPosition;
+    int lPositionMarkerCapturedPosition;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -2864,7 +2864,7 @@ BOOL CGatewayDriveToEpos::Process_GetPositionIs(CCommand_VCS* p_pCommand, CDevic
     BOOL oResult = TRUE;
 
     BYTE ubNodeId(0);
-    long lPositionIs = 0;
+    int lPositionIs = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -2902,7 +2902,7 @@ BOOL CGatewayDriveToEpos::Process_GetVelocityIs(CCommand_VCS* p_pCommand, CDevic
     BOOL oResult = TRUE;
 
     BYTE ubNodeId(0);
-    long lVelocityIs = 0;
+    int lVelocityIs = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -2939,7 +2939,7 @@ BOOL CGatewayDriveToEpos::Process_GetVelocityIsAveraged(CCommand_VCS* p_pCommand
     BOOL oResult(FALSE);
 
     BYTE ubNodeId(0);
-    long lVelocityIsAveraged = 0;
+    int lVelocityIsAveraged = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -2974,7 +2974,7 @@ BOOL CGatewayDriveToEpos::Process_GetPositionMust(CCommand_VCS* p_pCommand, CDev
     BOOL oResult = TRUE;
 
     BYTE ubNodeId(0);
-    long lPositionMust = 0;
+    int lPositionMust = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3011,7 +3011,7 @@ BOOL CGatewayDriveToEpos::Process_SetPositionMust(CCommand_VCS* p_pCommand, CDev
     BOOL oResult = FALSE;
 
     BYTE ubNodeId(0);
-    long lPositionMust;
+    int lPositionMust;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3102,7 +3102,7 @@ BOOL CGatewayDriveToEpos::Process_GetTargetPosition(CCommand_VCS* p_pCommand, CD
     BOOL oResult = TRUE;
 
     BYTE ubNodeId(0);
-    long lTargetPosition;
+    int lTargetPosition;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3323,7 +3323,7 @@ BOOL CGatewayDriveToEpos::Process_GetTargetVelocity(CCommand_VCS* p_pCommand, CD
     WORD usSubIndex;
     BOOL oResult = TRUE;
     BYTE ubNodeId(0);
-    long lTargetVelocity = 0;
+    int lTargetVelocity = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3439,7 +3439,7 @@ BOOL CGatewayDriveToEpos::Process_MoveWithVelocity(CCommand_VCS* p_pCommand, CDe
     BOOL oResult = TRUE;
 
     BYTE ubNodeId(0);
-    long lTargetVelocity;
+    int lTargetVelocity;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -4512,7 +4512,7 @@ BOOL CGatewayDriveToEpos::Process_GetVelocityMust(CCommand_VCS* p_pCommand, CDev
     BOOL oResult = FALSE;
 
     BYTE ubNodeId(0);
-    long lVelocityMust = 0;
+    int lVelocityMust = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -4545,7 +4545,7 @@ BOOL CGatewayDriveToEpos::Process_SetVelocityMust(CCommand_VCS* p_pCommand, CDev
     BOOL oResult = FALSE;
 
     BYTE ubNodeId(0);
-    long lVelocityMust;
+    int lVelocityMust;
     CErrorInfo errorInfo;
 
     if(p_pCommand)

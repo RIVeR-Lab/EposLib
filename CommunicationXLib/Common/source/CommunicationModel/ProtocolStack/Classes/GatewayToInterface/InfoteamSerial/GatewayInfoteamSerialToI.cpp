@@ -510,7 +510,7 @@ BOOL CGatewayInfoteamSerialToI::ReceiveFrameRepeated(CInterfaceManagerBase* pInt
 
 BOOL CGatewayInfoteamSerialToI::ReceiveFrame(CInterfaceManagerBase* pInterfaceManager,HANDLE hI_Handle,HANDLE hTransactionHandle, DWORD p_ulMaxPackageSize, DWORD* pdRetPackageSize,DWORD* pdRetChecksum,void** ppRetDataBuffer,DWORD* pdRetDataBufferLength,DWORD dTimeout,BOOL oSendRepAck,CErrorInfo* pErrorInfo)
 {
-	DWORD startTime,time;
+	unsigned long startTime,time;
 	BOOL oFirstDataReceived;
 	DWORD dPackageSize = 0;
 	BYTE uAck;

@@ -3000,8 +3000,8 @@ MotionInfo_DllExport int __stdcall VCS_WaitForTargetReached(HANDLE KeyHandle, WO
     int oResult(FALSE);
     int oTargetReached(FALSE);
 
-    DWORD ulTimeStart;
-    DWORD ulTimeRunOff;
+    unsigned long ulTimeStart;
+    unsigned long ulTimeRunOff;
 
     //Start Time
     ulTimeStart = MmcGetTickCount();
@@ -3108,7 +3108,7 @@ ProfilePositionMode_DllExport int __stdcall VCS_GetPositionProfile(HANDLE KeyHan
     return oResult;
 }
 
-ProfilePositionMode_DllExport int __stdcall VCS_MoveToPosition(HANDLE KeyHandle, WORD NodeId, long TargetPosition, int Absolute, int Immediately, DWORD* pErrorCode)
+ProfilePositionMode_DllExport int __stdcall VCS_MoveToPosition(HANDLE KeyHandle, WORD NodeId, int TargetPosition, int Absolute, int Immediately, DWORD* pErrorCode)
 {
     int oResult(FALSE);
     BYTE ubNodeId((BYTE)NodeId);
@@ -3145,7 +3145,7 @@ ProfilePositionMode_DllExport int __stdcall VCS_MoveToPosition(HANDLE KeyHandle,
     return oResult;
 }
 
-ProfilePositionMode_DllExport int VCS_GetTargetPosition(HANDLE KeyHandle, WORD NodeId, long* pTargetPosition, DWORD* pErrorCode)
+ProfilePositionMode_DllExport int VCS_GetTargetPosition(HANDLE KeyHandle, WORD NodeId, int* pTargetPosition, DWORD* pErrorCode)
 {
     int oResult(FALSE);
     BYTE ubNodeId((BYTE)NodeId);
@@ -3361,7 +3361,7 @@ ProfileVelocityMode_DllExport int VCS_GetVelocityProfile(HANDLE KeyHandle, WORD 
     return oResult;
 }
 
-ProfileVelocityMode_DllExport int VCS_MoveWithVelocity(HANDLE KeyHandle, WORD NodeId, long TargetVelocity, DWORD* pErrorCode)
+ProfileVelocityMode_DllExport int VCS_MoveWithVelocity(HANDLE KeyHandle, WORD NodeId, int TargetVelocity, DWORD* pErrorCode)
 {
     int oResult(FALSE);
     BYTE ubNodeId((BYTE)NodeId);
@@ -3396,7 +3396,7 @@ ProfileVelocityMode_DllExport int VCS_MoveWithVelocity(HANDLE KeyHandle, WORD No
     return oResult;
 }
 
-ProfileVelocityMode_DllExport int VCS_GetTargetVelocity(HANDLE KeyHandle, WORD NodeId, long* pTargetVelocity, DWORD* pErrorCode)
+ProfileVelocityMode_DllExport int VCS_GetTargetVelocity(HANDLE KeyHandle, WORD NodeId, int* pTargetVelocity, DWORD* pErrorCode)
 {
     int oResult(FALSE);
     BYTE ubNodeId((BYTE)NodeId);
@@ -3544,7 +3544,7 @@ HomingMode_DllExport int VCS_ActivateHomingMode(HANDLE KeyHandle, WORD NodeId, D
     return VCS_SetOperationMode(KeyHandle, NodeId, OperationMode, pErrorCode);
 }
 
-HomingMode_DllExport int VCS_SetHomingParameter(HANDLE KeyHandle, WORD NodeId, DWORD HomingAcceleration, DWORD SpeedSwitch, DWORD SpeedIndex, long HomeOffset, WORD CurrentTreshold, long HomePosition, DWORD* pErrorCode)
+HomingMode_DllExport int VCS_SetHomingParameter(HANDLE KeyHandle, WORD NodeId, DWORD HomingAcceleration, DWORD SpeedSwitch, DWORD SpeedIndex, int HomeOffset, WORD CurrentTreshold, int HomePosition, DWORD* pErrorCode)
 {
     int oResult(FALSE);
     BYTE ubNodeId((BYTE)NodeId);
@@ -3584,7 +3584,7 @@ HomingMode_DllExport int VCS_SetHomingParameter(HANDLE KeyHandle, WORD NodeId, D
     return oResult;
 }
 
-HomingMode_DllExport int VCS_GetHomingParameter(HANDLE KeyHandle, WORD NodeId, DWORD* pHomingAcceleration, DWORD* pSpeedSwitch, DWORD* pSpeedIndex, long* pHomeOffset, WORD* pCurrentTreshold, long* pHomePosition, DWORD* pErrorCode)
+HomingMode_DllExport int VCS_GetHomingParameter(HANDLE KeyHandle, WORD NodeId, DWORD* pHomingAcceleration, DWORD* pSpeedSwitch, DWORD* pSpeedIndex, int* pHomeOffset, WORD* pCurrentTreshold, int* pHomePosition, DWORD* pErrorCode)
 {
     int oResult(FALSE);
     BYTE ubNodeId((BYTE)NodeId);
@@ -3991,7 +3991,7 @@ InterpolatedPositionMode_DllExport int __stdcall VCS_GetFreeIpmBufferSize(HANDLE
     return oResult;
 }
 
-InterpolatedPositionMode_DllExport int __stdcall VCS_AddPvtValueToIpmBuffer(HANDLE KeyHandle, WORD NodeId, long Position, long Velocity, BYTE Time, DWORD *pErrorCode)
+InterpolatedPositionMode_DllExport int __stdcall VCS_AddPvtValueToIpmBuffer(HANDLE KeyHandle, WORD NodeId, int Position, int Velocity, BYTE Time, DWORD *pErrorCode)
 {
     int oResult(FALSE);
     BYTE ubNodeId((BYTE)NodeId);
@@ -4147,7 +4147,7 @@ PositionMode_DllExport int __stdcall VCS_ActivatePositionMode(HANDLE KeyHandle, 
     return VCS_SetOperationMode(KeyHandle, NodeId, OperationMode, pErrorCode);
 }
 
-PositionMode_DllExport int __stdcall VCS_SetPositionMust(HANDLE KeyHandle, WORD NodeId, long PositionMust, DWORD* pErrorCode)
+PositionMode_DllExport int __stdcall VCS_SetPositionMust(HANDLE KeyHandle, WORD NodeId, int PositionMust, DWORD* pErrorCode)
 {
     int oResult(FALSE);
     BYTE ubNodeId((BYTE)NodeId);
@@ -4182,7 +4182,7 @@ PositionMode_DllExport int __stdcall VCS_SetPositionMust(HANDLE KeyHandle, WORD 
     return oResult;
 }
 
-PositionMode_DllExport int __stdcall VCS_GetPositionMust(HANDLE KeyHandle, WORD NodeId, long* pPositionMust, DWORD* pErrorCode)
+PositionMode_DllExport int __stdcall VCS_GetPositionMust(HANDLE KeyHandle, WORD NodeId, int* pPositionMust, DWORD* pErrorCode)
 {
     int oResult(FALSE);
     BYTE ubNodeId((BYTE)NodeId);
@@ -4218,7 +4218,7 @@ PositionMode_DllExport int __stdcall VCS_GetPositionMust(HANDLE KeyHandle, WORD 
 }
 
 //Advanced Functions Position Mode
-PositionMode_DllExport int __stdcall VCS_ActivateAnalogPositionSetpoint(HANDLE KeyHandle, WORD NodeId, WORD AnalogInputNumber, float Scaling, long Offset, DWORD *pErrorCode)
+PositionMode_DllExport int __stdcall VCS_ActivateAnalogPositionSetpoint(HANDLE KeyHandle, WORD NodeId, WORD AnalogInputNumber, float Scaling, int Offset, DWORD *pErrorCode)
 {
     int oResult(FALSE);
     BYTE ubNodeId((BYTE)NodeId);
@@ -4366,7 +4366,7 @@ VelocityMode_DllExport int __stdcall VCS_ActivateVelocityMode(HANDLE KeyHandle, 
     return VCS_SetOperationMode(KeyHandle, NodeId, OperationMode, pErrorCode);
 }
 
-VelocityMode_DllExport int __stdcall VCS_SetVelocityMust(HANDLE KeyHandle, WORD NodeId, long VelocityMust, DWORD* pErrorCode)
+VelocityMode_DllExport int __stdcall VCS_SetVelocityMust(HANDLE KeyHandle, WORD NodeId, int VelocityMust, DWORD* pErrorCode)
 {
     int oResult(FALSE);
     BYTE ubNodeId((BYTE)NodeId);
@@ -4401,7 +4401,7 @@ VelocityMode_DllExport int __stdcall VCS_SetVelocityMust(HANDLE KeyHandle, WORD 
     return oResult;
 }
 
-VelocityMode_DllExport int __stdcall VCS_GetVelocityMust(HANDLE KeyHandle, WORD NodeId, long* pVelocityMust, DWORD* pErrorCode)
+VelocityMode_DllExport int __stdcall VCS_GetVelocityMust(HANDLE KeyHandle, WORD NodeId, int* pVelocityMust, DWORD* pErrorCode)
 {
     int oResult(FALSE);
     BYTE ubNodeId((BYTE)NodeId);
@@ -4437,7 +4437,7 @@ VelocityMode_DllExport int __stdcall VCS_GetVelocityMust(HANDLE KeyHandle, WORD 
 }
 
 //Advanced Functions
-VelocityMode_DllExport int __stdcall VCS_ActivateAnalogVelocitySetpoint(HANDLE KeyHandle, WORD NodeId, WORD AnalogInputNumber, float Scaling, long Offset, DWORD *pErrorCode)
+VelocityMode_DllExport int __stdcall VCS_ActivateAnalogVelocitySetpoint(HANDLE KeyHandle, WORD NodeId, WORD AnalogInputNumber, float Scaling, int Offset, DWORD *pErrorCode)
 {
     int oResult(FALSE);
     BYTE ubNodeId((BYTE)NodeId);
@@ -5367,7 +5367,7 @@ InputsOutputs_DllExport int __stdcall VCS_DisablePositionCompare(HANDLE KeyHandl
     return oResult;
 }
 
-InputsOutputs_DllExport int __stdcall VCS_SetPositionCompareReferencePosition(HANDLE KeyHandle, WORD NodeId, long ReferencePosition, DWORD *pErrorCode)
+InputsOutputs_DllExport int __stdcall VCS_SetPositionCompareReferencePosition(HANDLE KeyHandle, WORD NodeId, int ReferencePosition, DWORD *pErrorCode)
 {
     int oResult(FALSE);
     BYTE ubNodeId((BYTE)NodeId);
@@ -5581,7 +5581,7 @@ InputsOutputs_DllExport int __stdcall VCS_ReadPositionMarkerCounter(HANDLE KeyHa
     return oResult;
 }
 
-InputsOutputs_DllExport int __stdcall VCS_ReadPositionMarkerCapturedPosition(HANDLE KeyHandle, WORD NodeId, WORD CounterIndex, long* pCapturedPosition, DWORD *pErrorCode)
+InputsOutputs_DllExport int __stdcall VCS_ReadPositionMarkerCapturedPosition(HANDLE KeyHandle, WORD NodeId, WORD CounterIndex, int* pCapturedPosition, DWORD *pErrorCode)
 {
     int oResult(FALSE);
     BYTE ubNodeId((BYTE)NodeId);

@@ -237,7 +237,7 @@ BOOL CGatewayMaxonSerialV2ToI::ReceiveFrame(CInterfaceManagerBase* pInterfaceMan
     DWORD dNbOfDataBytesToRead(0);
     DWORD dReadBlockSize(0);
     BOOL oEscapeState(FALSE);
-    DWORD dStartTime(0);
+    unsigned long dStartTime(0);
     DWORD dTime(0);
     BOOL oResult(FALSE);
 

@@ -275,7 +275,7 @@ BOOL CGatewayVCStoEsam::ReadInt16Object(CDeviceCommandSetManagerBase* pManager, 
     return FALSE;
 }
 
-BOOL CGatewayVCStoEsam::ReadInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, long* plValue, CErrorInfo* pErrorInfo)
+BOOL CGatewayVCStoEsam::ReadInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, int* plValue, CErrorInfo* pErrorInfo)
 {
     DWORD dNumberOfBytesRead;
 
@@ -475,7 +475,7 @@ BOOL CGatewayVCStoEsam::WriteInt16Object(CDeviceCommandSetManagerBase* pManager,
     return TRUE;
 }
 
-BOOL CGatewayVCStoEsam::WriteInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, long lValue, CErrorInfo* pErrorInfo)
+BOOL CGatewayVCStoEsam::WriteInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, BYTE uPortNumber, BYTE uNodeId, WORD wIndex, BYTE uSubIndex, int lValue, CErrorInfo* pErrorInfo)
 {
     DWORD dNumberOfBytesWritten;
 

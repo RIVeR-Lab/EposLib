@@ -179,7 +179,7 @@ BOOL CGatewayCANopenToI::Process_InitiateSDODownload(CCommand_PS* pCommand, CInt
     BOOL oBadSdoFrameReceived = FALSE;
     CErrorInfo errorInfo;
     DWORD dTimeout;
-    DWORD time, start;
+    unsigned long time, start;
 
     if(pCommand && pInterfaceManager && m_pSendingFrame && m_pReceivingFrame)
     {
@@ -341,7 +341,7 @@ BOOL CGatewayCANopenToI::Process_NetworkIndication(CCommand_PS* pCommand, CInter
     BOOL oBadSdoFrameReceived = FALSE;
     CErrorInfo errorInfo;
     DWORD dTimeout;
-    DWORD time, start;
+    unsigned long time, start;
 
     if(pCommand && pInterfaceManager && m_pSendingFrame && m_pReceivingFrame)
     {

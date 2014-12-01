@@ -76,7 +76,7 @@ BOOL CCommandSetMotionInfo_VCS_Drive::VCS_GetMovementState(CLayerManagerBase* p_
     return oResult;
 }
 
-BOOL CCommandSetMotionInfo_VCS_Drive::VCS_GetPositionIs(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long *p_plPositionIs, CErrorInfo* p_pErrorInfo)
+BOOL CCommandSetMotionInfo_VCS_Drive::VCS_GetPositionIs(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int *p_plPositionIs, CErrorInfo* p_pErrorInfo)
 {
     BOOL oResult = FALSE;
 
@@ -98,7 +98,7 @@ BOOL CCommandSetMotionInfo_VCS_Drive::VCS_GetPositionIs(CLayerManagerBase* p_pMa
     return oResult;
 }
 
-BOOL CCommandSetMotionInfo_VCS_Drive::VCS_GetVelocityIs(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long *p_plVelocityIs, CErrorInfo* p_pErrorInfo)
+BOOL CCommandSetMotionInfo_VCS_Drive::VCS_GetVelocityIs(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int *p_plVelocityIs, CErrorInfo* p_pErrorInfo)
 {
     BOOL oResult = FALSE;
 

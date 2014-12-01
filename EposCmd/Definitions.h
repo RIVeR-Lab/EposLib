@@ -174,8 +174,8 @@
     ProfilePositionMode_DllExport int  VCS_ActivateProfilePositionMode(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
     ProfilePositionMode_DllExport int  VCS_SetPositionProfile(void* KeyHandle, unsigned short NodeId, unsigned int ProfileVelocity, unsigned int ProfileAcceleration, unsigned int ProfileDeceleration, unsigned int* pErrorCode);
     ProfilePositionMode_DllExport int  VCS_GetPositionProfile(void* KeyHandle, unsigned short NodeId, unsigned int* pProfileVelocity, unsigned int* pProfileAcceleration, unsigned int* pProfileDeceleration, unsigned int* pErrorCode);
-    ProfilePositionMode_DllExport int  VCS_MoveToPosition(void* KeyHandle, unsigned short NodeId, long TargetPosition, int Absolute, int Immediately, unsigned int* pErrorCode);
-    ProfilePositionMode_DllExport int  VCS_GetTargetPosition(void* KeyHandle, unsigned short NodeId, long* pTargetPosition, unsigned int* pErrorCode);
+    ProfilePositionMode_DllExport int  VCS_MoveToPosition(void* KeyHandle, unsigned short NodeId, int TargetPosition, int Absolute, int Immediately, unsigned int* pErrorCode);
+    ProfilePositionMode_DllExport int  VCS_GetTargetPosition(void* KeyHandle, unsigned short NodeId, int* pTargetPosition, unsigned int* pErrorCode);
     ProfilePositionMode_DllExport int  VCS_HaltPositionMovement(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
 
     //Advanced Functions
@@ -186,8 +186,8 @@
     ProfileVelocityMode_DllExport int  VCS_ActivateProfileVelocityMode(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
     ProfileVelocityMode_DllExport int  VCS_SetVelocityProfile(void* KeyHandle, unsigned short NodeId, unsigned int ProfileAcceleration, unsigned int ProfileDeceleration, unsigned int* pErrorCode);
     ProfileVelocityMode_DllExport int  VCS_GetVelocityProfile(void* KeyHandle, unsigned short NodeId, unsigned int* pProfileAcceleration, unsigned int* pProfileDeceleration, unsigned int* pErrorCode);
-    ProfileVelocityMode_DllExport int  VCS_MoveWithVelocity(void* KeyHandle, unsigned short NodeId, long TargetVelocity, unsigned int* pErrorCode);
-    ProfileVelocityMode_DllExport int  VCS_GetTargetVelocity(void* KeyHandle, unsigned short NodeId, long* pTargetVelocity, unsigned int* pErrorCode);
+    ProfileVelocityMode_DllExport int  VCS_MoveWithVelocity(void* KeyHandle, unsigned short NodeId, int TargetVelocity, unsigned int* pErrorCode);
+    ProfileVelocityMode_DllExport int  VCS_GetTargetVelocity(void* KeyHandle, unsigned short NodeId, int* pTargetVelocity, unsigned int* pErrorCode);
     ProfileVelocityMode_DllExport int  VCS_HaltVelocityMovement(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
 
     //Advanced Functions
@@ -196,8 +196,8 @@
 
 //Homing Mode
     HomingMode_DllExport int  VCS_ActivateHomingMode(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
-    HomingMode_DllExport int  VCS_SetHomingParameter(void* KeyHandle, unsigned short NodeId, unsigned int HomingAcceleration, unsigned int SpeedSwitch, unsigned int SpeedIndex, long HomeOffset, unsigned short CurrentTreshold, long HomePosition, unsigned int* pErrorCode);
-    HomingMode_DllExport int  VCS_GetHomingParameter(void* KeyHandle, unsigned short NodeId, unsigned int* pHomingAcceleration, unsigned int* pSpeedSwitch, unsigned int* pSpeedIndex, long* pHomeOffset, unsigned short* pCurrentTreshold, long* pHomePosition, unsigned int* pErrorCode);
+    HomingMode_DllExport int  VCS_SetHomingParameter(void* KeyHandle, unsigned short NodeId, unsigned int HomingAcceleration, unsigned int SpeedSwitch, unsigned int SpeedIndex, int HomeOffset, unsigned short CurrentTreshold, int HomePosition, unsigned int* pErrorCode);
+    HomingMode_DllExport int  VCS_GetHomingParameter(void* KeyHandle, unsigned short NodeId, unsigned int* pHomingAcceleration, unsigned int* pSpeedSwitch, unsigned int* pSpeedIndex, int* pHomeOffset, unsigned short* pCurrentTreshold, int* pHomePosition, unsigned int* pErrorCode);
     HomingMode_DllExport int  VCS_FindHome(void* KeyHandle, unsigned short NodeId, char HomingMethod, unsigned int* pErrorCode);
     HomingMode_DllExport int  VCS_StopHoming(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
     HomingMode_DllExport int  VCS_DefinePosition(void* KeyHandle, unsigned short NodeId, int HomePosition, unsigned int* pErrorCode);
@@ -210,29 +210,29 @@
     InterpolatedPositionMode_DllExport int  VCS_GetIpmBufferParameter(void* KeyHandle, unsigned short NodeId, unsigned short* pUnderflowWarningLimit, unsigned short* pOverflowWarningLimit, unsigned int* pMaxBufferSize, unsigned int* pErrorCode);
     InterpolatedPositionMode_DllExport int  VCS_ClearIpmBuffer(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
     InterpolatedPositionMode_DllExport int  VCS_GetFreeIpmBufferSize(void* KeyHandle, unsigned short NodeId, unsigned int* pBufferSize, unsigned int* pErrorCode);
-    InterpolatedPositionMode_DllExport int  VCS_AddPvtValueToIpmBuffer(void* KeyHandle, unsigned short NodeId, long Position, long Velocity, unsigned char Time, unsigned int* pErrorCode);
+    InterpolatedPositionMode_DllExport int  VCS_AddPvtValueToIpmBuffer(void* KeyHandle, unsigned short NodeId, int Position, int Velocity, unsigned char Time, unsigned int* pErrorCode);
     InterpolatedPositionMode_DllExport int  VCS_StartIpmTrajectory(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
     InterpolatedPositionMode_DllExport int  VCS_StopIpmTrajectory(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
     InterpolatedPositionMode_DllExport int  VCS_GetIpmStatus(void* KeyHandle, unsigned short NodeId, int* pTrajectoryRunning, int* pIsUnderflowWarning, int* pIsOverflowWarning, int* pIsVelocityWarning, int* pIsAccelerationWarning, int* pIsUnderflowError, int* pIsOverflowError, int* pIsVelocityError, int* pIsAccelerationError, unsigned int* pErrorCode);
 
 //Position Mode
     PositionMode_DllExport int  VCS_ActivatePositionMode(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
-    PositionMode_DllExport int  VCS_SetPositionMust(void* KeyHandle, unsigned short NodeId, long PositionMust, unsigned int* pErrorCode);
-    PositionMode_DllExport int  VCS_GetPositionMust(void* KeyHandle, unsigned short NodeId, long* pPositionMust, unsigned int* pErrorCode);
+    PositionMode_DllExport int  VCS_SetPositionMust(void* KeyHandle, unsigned short NodeId, int PositionMust, unsigned int* pErrorCode);
+    PositionMode_DllExport int  VCS_GetPositionMust(void* KeyHandle, unsigned short NodeId, int* pPositionMust, unsigned int* pErrorCode);
 
     //Advanced Functions
-    PositionMode_DllExport int  VCS_ActivateAnalogPositionSetpoint(void* KeyHandle, unsigned short NodeId, unsigned short AnalogInputNumber, float Scaling, long Offset, unsigned int* pErrorCode);
+    PositionMode_DllExport int  VCS_ActivateAnalogPositionSetpoint(void* KeyHandle, unsigned short NodeId, unsigned short AnalogInputNumber, float Scaling, int Offset, unsigned int* pErrorCode);
     PositionMode_DllExport int  VCS_DeactivateAnalogPositionSetpoint(void* KeyHandle, unsigned short NodeId, unsigned short AnalogInputNumber, unsigned int* pErrorCode);
     PositionMode_DllExport int  VCS_EnableAnalogPositionSetpoint(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
     PositionMode_DllExport int  VCS_DisableAnalogPositionSetpoint(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
 
 //Velocity Mode
     VelocityMode_DllExport int  VCS_ActivateVelocityMode(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
-    VelocityMode_DllExport int  VCS_SetVelocityMust(void* KeyHandle, unsigned short NodeId, long VelocityMust, unsigned int* pErrorCode);
-    VelocityMode_DllExport int  VCS_GetVelocityMust(void* KeyHandle, unsigned short NodeId, long* pVelocityMust, unsigned int* pErrorCode);
+    VelocityMode_DllExport int  VCS_SetVelocityMust(void* KeyHandle, unsigned short NodeId, int VelocityMust, unsigned int* pErrorCode);
+    VelocityMode_DllExport int  VCS_GetVelocityMust(void* KeyHandle, unsigned short NodeId, int* pVelocityMust, unsigned int* pErrorCode);
 
     //Advanced Functions
-    VelocityMode_DllExport int  VCS_ActivateAnalogVelocitySetpoint(void* KeyHandle, unsigned short NodeId, unsigned short AnalogInputNumber, float Scaling, long Offset, unsigned int* pErrorCode);
+    VelocityMode_DllExport int  VCS_ActivateAnalogVelocitySetpoint(void* KeyHandle, unsigned short NodeId, unsigned short AnalogInputNumber, float Scaling, int Offset, unsigned int* pErrorCode);
     VelocityMode_DllExport int  VCS_DeactivateAnalogVelocitySetpoint(void* KeyHandle, unsigned short NodeId, unsigned short AnalogInputNumber, unsigned int* pErrorCode);
     VelocityMode_DllExport int  VCS_EnableAnalogVelocitySetpoint(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
     VelocityMode_DllExport int  VCS_DisableAnalogVelocitySetpoint(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
@@ -273,7 +273,7 @@
     InputsOutputs_DllExport int  VCS_DeactivatePositionCompare(void* KeyHandle, unsigned short NodeId, unsigned short DigitalOutputNumber, unsigned int* pErrorCode);
     InputsOutputs_DllExport int  VCS_EnablePositionCompare(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
     InputsOutputs_DllExport int  VCS_DisablePositionCompare(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
-    InputsOutputs_DllExport int  VCS_SetPositionCompareReferencePosition(void* KeyHandle, unsigned short NodeId, long ReferencePosition, unsigned int* pErrorCode);
+    InputsOutputs_DllExport int  VCS_SetPositionCompareReferencePosition(void* KeyHandle, unsigned short NodeId, int ReferencePosition, unsigned int* pErrorCode);
 
     //Position Marker
     InputsOutputs_DllExport int  VCS_SetPositionMarkerParameter(void* KeyHandle, unsigned short NodeId, unsigned char PositionMarkerEdgeType, unsigned char PositionMarkerMode, unsigned int* pErrorCode);
@@ -281,7 +281,7 @@
     InputsOutputs_DllExport int  VCS_ActivatePositionMarker(void* KeyHandle, unsigned short NodeId, unsigned short DigitalInputNumber, int Polarity, unsigned int* pErrorCode);
     InputsOutputs_DllExport int  VCS_DeactivatePositionMarker(void* KeyHandle, unsigned short NodeId, unsigned short DigitalInputNumber, unsigned int* pErrorCode);
     InputsOutputs_DllExport int  VCS_ReadPositionMarkerCounter(void* KeyHandle, unsigned short NodeId, unsigned short* pCount, unsigned int* pErrorCode);
-    InputsOutputs_DllExport int  VCS_ReadPositionMarkerCapturedPosition(void* KeyHandle, unsigned short NodeId, unsigned short CounterIndex, long* pCapturedPosition, unsigned int* pErrorCode);
+    InputsOutputs_DllExport int  VCS_ReadPositionMarkerCapturedPosition(void* KeyHandle, unsigned short NodeId, unsigned short CounterIndex, int* pCapturedPosition, unsigned int* pErrorCode);
     InputsOutputs_DllExport int  VCS_ResetPositionMarkerCounter(void* KeyHandle, unsigned short NodeId, unsigned int* pErrorCode);
 
 /*************************************************************************************************************************************

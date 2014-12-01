@@ -352,7 +352,7 @@ BOOL CGatewayVCStoEsam2::ReadInt16Object(CDeviceCommandSetManagerBase* p_pManage
     return FALSE;
 }
 
-BOOL CGatewayVCStoEsam2::ReadInt32Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, long* p_plValue, CErrorInfo* p_pErrorInfo)
+BOOL CGatewayVCStoEsam2::ReadInt32Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, int* p_plValue, CErrorInfo* p_pErrorInfo)
 {
     DWORD ulNumberOfBytesToRead(0);
 	DWORD ulNumberOfBytesRead(0);
@@ -630,7 +630,7 @@ BOOL CGatewayVCStoEsam2::WriteInt16Object(CDeviceCommandSetManagerBase* p_pManag
     return TRUE;
 }
 
-BOOL CGatewayVCStoEsam2::WriteInt32Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, long p_lValue, CErrorInfo* p_pErrorInfo)
+BOOL CGatewayVCStoEsam2::WriteInt32Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, int p_lValue, CErrorInfo* p_pErrorInfo)
 {
     DWORD ulNumberOfBytesWritten(0);
 

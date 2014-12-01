@@ -34,7 +34,7 @@ CCommandSetVelocityMode_VCS_Drive2::~CCommandSetVelocityMode_VCS_Drive2()
     DeleteCommands();
 }
 
-BOOL CCommandSetVelocityMode_VCS_Drive2::VCS_GetVelocityMust(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long *p_plVelocityMust, CErrorInfo* p_pErrorInfo)
+BOOL CCommandSetVelocityMode_VCS_Drive2::VCS_GetVelocityMust(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int *p_plVelocityMust, CErrorInfo* p_pErrorInfo)
 {
     BOOL oResult = FALSE;
 
@@ -56,7 +56,7 @@ BOOL CCommandSetVelocityMode_VCS_Drive2::VCS_GetVelocityMust(CLayerManagerBase* 
     return oResult;
 }
 
-BOOL CCommandSetVelocityMode_VCS_Drive2::VCS_SetVelocityMust(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long p_lVelocityMust, CErrorInfo* p_pErrorInfo)
+BOOL CCommandSetVelocityMode_VCS_Drive2::VCS_SetVelocityMust(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int p_lVelocityMust, CErrorInfo* p_pErrorInfo)
 {
     BOOL oResult = FALSE;
 

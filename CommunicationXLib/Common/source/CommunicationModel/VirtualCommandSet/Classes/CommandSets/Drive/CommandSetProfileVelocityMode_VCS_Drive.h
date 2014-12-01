@@ -23,10 +23,10 @@ class CLayerManagerBase;
 class CCommandSetProfileVelocityMode_VCS_Drive : public CCommandSetBase_VCS
 {
 public:
-    BOOL VCS_GetTargetVelocity(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long *p_plTargetVelocity, CErrorInfo* p_pErrorInfo = NULL);
+    BOOL VCS_GetTargetVelocity(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int *p_plTargetVelocity, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_GetVelocityProfile(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, DWORD* p_pdProfileAcceleration, DWORD* p_pdProfileDeceleration, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_HaltVelocityMovement(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, CErrorInfo* p_pErrorInfo = NULL);
-    BOOL VCS_MoveWithVelocity(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long p_lTargetVelocity, CErrorInfo* p_pErrorInfo = NULL);
+    BOOL VCS_MoveWithVelocity(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int p_lTargetVelocity, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_SetVelocityProfile(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, DWORD p_ulProfileAcceleration, DWORD p_ulProfileDeceleration, CErrorInfo* p_pErrorInfo = NULL);
 
     CXXMLFile::CElementPart* StoreToXMLFile(CXXMLFile* p_pFile, CXXMLFile::CElementPart* p_pParentElement);

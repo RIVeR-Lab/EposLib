@@ -27,7 +27,7 @@ public:
     BOOL VCS_DeactivatePositionCompare(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, WORD p_usDigitalOutputNumber, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_EnablePositionCompare(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_DisablePositionCompare(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, CErrorInfo* p_pErrorInfo = NULL);
-    BOOL VCS_SetPositionCompareReferencePosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long p_lReferencePosition, CErrorInfo* p_pErrorInfo = NULL);
+    BOOL VCS_SetPositionCompareReferencePosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int p_lReferencePosition, CErrorInfo* p_pErrorInfo = NULL);
 
     CXXMLFile::CElementPart* StoreToXMLFile(CXXMLFile* p_pFile, CXXMLFile::CElementPart* p_pParentElement);
 

@@ -55,7 +55,7 @@ BOOL CCommandSetHomingMode_VCS_Drive2::VCS_FindHome(CLayerManagerBase* p_pManage
     return oResult;
 }
 
-BOOL CCommandSetHomingMode_VCS_Drive2::VCS_GetHomingParameter(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, DWORD *p_pulHomingAcceleration, DWORD *p_pulSpeedSwitch, DWORD *p_pulSpeedIndex, long *p_plHomeOffset, WORD* p_pusCurrentThreshold, long *p_plHomePosition, CErrorInfo* p_pErrorInfo)
+BOOL CCommandSetHomingMode_VCS_Drive2::VCS_GetHomingParameter(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, DWORD *p_pulHomingAcceleration, DWORD *p_pulSpeedSwitch, DWORD *p_pulSpeedIndex, int *p_plHomeOffset, WORD* p_pusCurrentThreshold, int *p_plHomePosition, CErrorInfo* p_pErrorInfo)
 {
     BOOL oResult = FALSE;
 
@@ -82,7 +82,7 @@ BOOL CCommandSetHomingMode_VCS_Drive2::VCS_GetHomingParameter(CLayerManagerBase*
     return oResult;
 }
 
-BOOL CCommandSetHomingMode_VCS_Drive2::VCS_SetHomingParameter(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, DWORD p_ulHomingAcceleration, DWORD p_ulSpeedSwitch, DWORD p_ulSpeedIndex, long p_lHomeOffset, WORD p_usCurrentThreshold, long p_lHomePosition, CErrorInfo* p_pErrorInfo)
+BOOL CCommandSetHomingMode_VCS_Drive2::VCS_SetHomingParameter(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, DWORD p_ulHomingAcceleration, DWORD p_ulSpeedSwitch, DWORD p_ulSpeedIndex, int p_lHomeOffset, WORD p_usCurrentThreshold, int p_lHomePosition, CErrorInfo* p_pErrorInfo)
 {
     BOOL oResult = FALSE;
 
@@ -126,7 +126,7 @@ BOOL CCommandSetHomingMode_VCS_Drive2::VCS_StopHoming(CLayerManagerBase* p_pMana
     return oResult;
 }
 
-BOOL CCommandSetHomingMode_VCS_Drive2::VCS_DefinePosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long p_lHomePosition, CErrorInfo* p_pErrorInfo)
+BOOL CCommandSetHomingMode_VCS_Drive2::VCS_DefinePosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int p_lHomePosition, CErrorInfo* p_pErrorInfo)
 {
     BOOL oResult = FALSE;
 

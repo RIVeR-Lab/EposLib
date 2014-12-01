@@ -26,7 +26,7 @@ public:
     BOOL VCS_ActivatePositionMarker(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, WORD p_usDigitalInputNumber, BOOL p_oPolarity, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_DeactivatePositionMarker(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, WORD p_usDigitalInputNumber, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_ReadPositionMarkerCounter(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, WORD* p_pCount, CErrorInfo* p_pErrorInfo = NULL);
-    BOOL VCS_ReadPositionMarkerCapturedPosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, WORD p_usCountIndex, long* p_plCapturedPosition, CErrorInfo* p_pErrorInfo = NULL);
+    BOOL VCS_ReadPositionMarkerCapturedPosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, WORD p_usCountIndex, int* p_plCapturedPosition, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_ResetPositionMarkerCounter(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, CErrorInfo* p_pErrorInfo = NULL);
 
     CXXMLFile::CElementPart* StoreToXMLFile(CXXMLFile* p_pFile, CXXMLFile::CElementPart* p_pParentElement);

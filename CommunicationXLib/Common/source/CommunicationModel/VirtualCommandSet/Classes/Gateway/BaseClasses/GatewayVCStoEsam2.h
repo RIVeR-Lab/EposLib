@@ -29,7 +29,7 @@ protected:
     //ObjectDictionary
     BOOL ReadInt8Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, __int8* p_pbValue, CErrorInfo* p_pErrorInfo = NULL);
     BOOL ReadInt16Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, short* p_psValue, CErrorInfo* p_pErrorInfo = NULL);
-    BOOL ReadInt32Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, long* p_plValue, CErrorInfo* p_pErrorInfo = NULL);
+    BOOL ReadInt32Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, int* p_plValue, CErrorInfo* p_pErrorInfo = NULL);
     BOOL ReadInt64Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, __int64* p_pullValue, CErrorInfo* p_pErrorInfo = NULL);
     BOOL ReadUInt8Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, BYTE* p_pubValue, CErrorInfo* p_pErrorInfo = NULL);
     BOOL ReadUInt16Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, WORD* p_pusValue, CErrorInfo* p_pErrorInfo = NULL);
@@ -40,7 +40,7 @@ protected:
 
     BOOL WriteInt8Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, __int8 p_bValue, CErrorInfo* p_pErrorInfo = NULL);
     BOOL WriteInt16Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, short p_sValue, CErrorInfo* p_pErrorInfo = NULL);
-    BOOL WriteInt32Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, long p_lValue, CErrorInfo* p_pErrorInfo = NULL);
+    BOOL WriteInt32Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, int p_lValue, CErrorInfo* p_pErrorInfo = NULL);
     BOOL WriteInt64Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, __int64 p_ullValue, CErrorInfo* p_pErrorInfo = NULL);
     BOOL WriteUInt8Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, BYTE p_ubValue, CErrorInfo* p_pErrorInfo = NULL);
     BOOL WriteUInt16Object(CDeviceCommandSetManagerBase* p_pManager, HANDLE p_hDCS_Handle, HANDLE p_hTransactionHandle, WORD p_usNetworkId, BYTE p_ubNodeId, WORD p_usIndex, BYTE p_ubSubIndex, WORD p_usValue, CErrorInfo* p_pErrorInfo = NULL);

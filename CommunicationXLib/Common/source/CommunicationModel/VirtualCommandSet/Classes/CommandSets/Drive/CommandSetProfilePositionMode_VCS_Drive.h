@@ -24,8 +24,8 @@ class CCommandSetProfilePositionMode_VCS_Drive : public CCommandSetBase_VCS
 {
 public:
     BOOL VCS_HaltPositionMovement(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, CErrorInfo* p_pErrorInfo = NULL);
-    BOOL VCS_MoveToPosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long p_lTargetPosition, BOOL p_oAbsolute, BOOL p_oImmediately, CErrorInfo* p_pErrorInfo = NULL);
-    BOOL VCS_GetTargetPosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long *p_plTargetPosition, CErrorInfo* p_pErrorInfo = NULL);
+    BOOL VCS_MoveToPosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int p_lTargetPosition, BOOL p_oAbsolute, BOOL p_oImmediately, CErrorInfo* p_pErrorInfo = NULL);
+    BOOL VCS_GetTargetPosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int *p_plTargetPosition, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_GetPositionProfile(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, DWORD* p_pulProfileVelocity, DWORD* p_pulProfileAcceleration, DWORD* p_pulProfileDeceleration, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_SetPositionProfile(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, DWORD p_ulProfileVelocity, DWORD p_ulProfileAcceleration, DWORD p_ulProfileDeceleration, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_EnablePositionWindow(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, DWORD p_ulPositionWindow, WORD p_usPositionWindowTime, CErrorInfo* p_pErrorInfo = NULL);

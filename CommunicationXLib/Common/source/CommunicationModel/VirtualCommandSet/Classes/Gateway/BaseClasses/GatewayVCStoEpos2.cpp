@@ -280,7 +280,7 @@ BOOL CGatewayVCStoEpos2::ReadInt16Object(CDeviceCommandSetManagerBase* pManager,
     return FALSE;
 }
 
-BOOL CGatewayVCStoEpos2::ReadInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, WORD wNodeId, WORD wIndex, WORD wSubIndex, long* plValue, CErrorInfo* pErrorInfo)
+BOOL CGatewayVCStoEpos2::ReadInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, WORD wNodeId, WORD wIndex, WORD wSubIndex, int* plValue, CErrorInfo* pErrorInfo)
 {
     DWORD dNumberOfBytesRead;
 
@@ -514,7 +514,7 @@ BOOL CGatewayVCStoEpos2::WriteInt16Object(CDeviceCommandSetManagerBase* pManager
     return TRUE;
 }
 
-BOOL CGatewayVCStoEpos2::WriteInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, WORD wNodeId, WORD wIndex, WORD wSubIndex, long lValue, CErrorInfo* pErrorInfo)
+BOOL CGatewayVCStoEpos2::WriteInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, WORD wNodeId, WORD wIndex, WORD wSubIndex, int lValue, CErrorInfo* pErrorInfo)
 {
     DWORD dNumberOfBytesWritten;
 

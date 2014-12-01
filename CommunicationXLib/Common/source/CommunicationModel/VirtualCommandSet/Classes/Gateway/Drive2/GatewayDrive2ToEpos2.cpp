@@ -331,7 +331,7 @@ BOOL CGatewayDrive2ToEpos2::Process_MoveToPosition(CCommand_VCS* p_pCommand, CDe
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lTargetPosition;
+    int lTargetPosition;
     BOOL oAbsolute;
     BOOL oImmediately;
     CErrorInfo errorInfo;
@@ -2119,9 +2119,9 @@ BOOL CGatewayDrive2ToEpos2::Process_GetHomingParameter(CCommand_VCS* p_pCommand,
     DWORD ulHomingAcceleration = 0;
     DWORD ulSpeedSwitch = 0;
     DWORD ulSpeedIndex = 0;
-    long lHomeOffset = 0;
+    int lHomeOffset = 0;
     WORD usCurrentThreshold = 0;
-    long lHomePosition = 0;
+    int lHomePosition = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -2202,9 +2202,9 @@ BOOL CGatewayDrive2ToEpos2::Process_SetHomingParameter(CCommand_VCS* p_pCommand,
     DWORD ulHomingAcceleration = 0;
     DWORD ulSpeedSwitch = 0;
     DWORD ulSpeedIndex = 0;
-    long lHomeOffset = 0;
+    int lHomeOffset = 0;
     WORD usCurrentThreshold = 0;
-    long lHomePosition = 0;
+    int lHomePosition = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -2285,7 +2285,7 @@ BOOL CGatewayDrive2ToEpos2::Process_DefinePosition(CCommand_VCS* p_pCommand, CDe
     BOOL oResult(TRUE);
 
     CErrorInfo errorInfo;
-    long lHomePosition = 0;
+    int lHomePosition = 0;
     BYTE ubNodeId(0);
 
     if(p_pCommand)
@@ -3182,7 +3182,7 @@ BOOL CGatewayDrive2ToEpos2::Process_SetPositionCompareReferencePosition(CCommand
     BYTE ubNodeId(0);
     WORD usSubIndex;
 
-    long lReferencePosition = 0;
+    int lReferencePosition = 0;
 
     if(p_pCommand)
     {
@@ -3500,7 +3500,7 @@ BOOL CGatewayDrive2ToEpos2::Process_ReadPositionMarkerCapturedPosition(CCommand_
 
     BYTE ubNodeId(0);
     WORD usCounterIndex;
-    long lPositionMarkerCapturedPosition(0);
+    int lPositionMarkerCapturedPosition(0);
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3690,7 +3690,7 @@ BOOL CGatewayDrive2ToEpos2::Process_GetPositionIs(CCommand_VCS* p_pCommand, CDev
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lPositionIs = 0;
+    int lPositionIs = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3723,7 +3723,7 @@ BOOL CGatewayDrive2ToEpos2::Process_GetVelocityIs(CCommand_VCS* p_pCommand, CDev
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lVelocityIs = 0;
+    int lVelocityIs = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3755,7 +3755,7 @@ BOOL CGatewayDrive2ToEpos2::Process_GetVelocityIsAveraged(CCommand_VCS* p_pComma
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lVelocityIsAveraged = 0;
+    int lVelocityIsAveraged = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3789,7 +3789,7 @@ BOOL CGatewayDrive2ToEpos2::Process_GetPositionMust(CCommand_VCS* p_pCommand, CD
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lPositionMust = 0;
+    int lPositionMust = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3822,7 +3822,7 @@ BOOL CGatewayDrive2ToEpos2::Process_SetPositionMust(CCommand_VCS* p_pCommand, CD
     BOOL oResult = FALSE;
 
     BYTE ubNodeId(0);
-    long lPositionMust;
+    int lPositionMust;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3910,7 +3910,7 @@ BOOL CGatewayDrive2ToEpos2::Process_GetTargetPosition(CCommand_VCS* p_pCommand, 
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lTargetPosition;
+    int lTargetPosition;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -4115,7 +4115,7 @@ BOOL CGatewayDrive2ToEpos2::Process_GetTargetVelocity(CCommand_VCS* p_pCommand, 
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lTargetVelocity = 0;
+    int lTargetVelocity = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -4222,7 +4222,7 @@ BOOL CGatewayDrive2ToEpos2::Process_MoveWithVelocity(CCommand_VCS* p_pCommand, C
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lTargetVelocity;
+    int lTargetVelocity;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -5320,7 +5320,7 @@ BOOL CGatewayDrive2ToEpos2::Process_GetVelocityMust(CCommand_VCS* p_pCommand, CD
     BOOL oResult = FALSE;
 
     BYTE ubNodeId(0);
-    long lVelocityMust = 0;
+    int lVelocityMust = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -5351,7 +5351,7 @@ BOOL CGatewayDrive2ToEpos2::Process_SetVelocityMust(CCommand_VCS* p_pCommand, CD
     BOOL oResult = FALSE;
 
     BYTE ubNodeId(0);
-    long lVelocityMust;
+    int lVelocityMust;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -5970,8 +5970,8 @@ BOOL CGatewayDrive2ToEpos2::Process_AddPvtValueToIpmBuffer(CCommand_VCS* p_pComm
     BYTE ubNodeId(0);
     WORD usSubIndex;
 
-    long lPosition = 0;
-    long lVelocity = 0;
+    int lPosition = 0;
+    int lVelocity = 0;
     BYTE ubTime = 0;
     long long llPvtReferencePoint = 0;
 
@@ -6367,7 +6367,7 @@ BOOL CGatewayDrive2ToEpos2::Process_ActivateAnalogPositionSetpoint(CCommand_VCS*
 
     WORD usAnalogInputNumber(0);
     float fScaling(0);
-    long lOffset(0);
+    int lOffset(0);
     CMmcDataConversion dataConversion;
     CStdString strScaling(_T(""));
     WORD usFractionNum(0);
@@ -6560,7 +6560,7 @@ BOOL CGatewayDrive2ToEpos2::Process_ActivateAnalogVelocitySetpoint(CCommand_VCS*
 
     WORD usAnalogInputNumber(0);
     float fScaling(0);
-    long lOffset(0);
+    int lOffset(0);
     CMmcDataConversion dataConversion;
     CStdString strScaling(_T(""));
     WORD usFractionNum(0);

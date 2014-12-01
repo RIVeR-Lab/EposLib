@@ -263,7 +263,7 @@ BOOL CGatewayDrive2ToEpos::Process_MoveToPosition(CCommand_VCS* p_pCommand, CDev
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lTargetPosition;
+    int lTargetPosition;
     BOOL oAbsolute;
     BOOL oImmediately;
     CErrorInfo errorInfo;
@@ -1800,9 +1800,9 @@ BOOL CGatewayDrive2ToEpos::Process_GetHomingParameter(CCommand_VCS* p_pCommand, 
     DWORD ulHomingAcceleration = 0;
     DWORD ulSpeedSwitch = 0;
     DWORD ulSpeedIndex = 0;
-    long lHomeOffset = 0;
+    int lHomeOffset = 0;
     WORD usCurrentThreshold = 0;
-    long lHomePosition = 0;
+    int lHomePosition = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -1897,9 +1897,9 @@ BOOL CGatewayDrive2ToEpos::Process_SetHomingParameter(CCommand_VCS* p_pCommand, 
     DWORD ulHomingAcceleration = 0;
     DWORD ulSpeedSwitch = 0;
     DWORD ulSpeedIndex = 0;
-    long lHomeOffset = 0;
+    int lHomeOffset = 0;
     WORD usCurrentThreshold = 0;
-    long lHomePosition = 0;
+    int lHomePosition = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -1991,7 +1991,7 @@ BOOL CGatewayDrive2ToEpos::Process_DefinePosition(CCommand_VCS* p_pCommand, CDev
     BOOL oResult(TRUE);
 
     CErrorInfo errorInfo;
-    long lHomePosition = 0;
+    int lHomePosition = 0;
     BYTE ubNodeId(0);
 
     if(p_pCommand)
@@ -2722,7 +2722,7 @@ BOOL CGatewayDrive2ToEpos::Process_ReadPositionMarkerCapturedPosition(CCommand_V
     WORD usSubIndex;
 
     BYTE ubNodeId(0);
-    long lPositionMarkerCapturedPosition;
+    int lPositionMarkerCapturedPosition;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -2918,7 +2918,7 @@ BOOL CGatewayDrive2ToEpos::Process_GetPositionIs(CCommand_VCS* p_pCommand, CDevi
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lPositionIs = 0;
+    int lPositionIs = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -2953,7 +2953,7 @@ BOOL CGatewayDrive2ToEpos::Process_GetVelocityIs(CCommand_VCS* p_pCommand, CDevi
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lVelocityIs = 0;
+    int lVelocityIs = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -2987,7 +2987,7 @@ BOOL CGatewayDrive2ToEpos::Process_GetVelocityIsAveraged(CCommand_VCS* p_pComman
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lVelocityIsAveraged = 0;
+    int lVelocityIsAveraged = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3021,7 +3021,7 @@ BOOL CGatewayDrive2ToEpos::Process_GetPositionMust(CCommand_VCS* p_pCommand, CDe
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lPositionMust = 0;
+    int lPositionMust = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3055,7 +3055,7 @@ BOOL CGatewayDrive2ToEpos::Process_SetPositionMust(CCommand_VCS* p_pCommand, CDe
     BOOL oResult = FALSE;
 
     BYTE ubNodeId(0);
-    long lPositionMust;
+    int lPositionMust;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3143,7 +3143,7 @@ BOOL CGatewayDrive2ToEpos::Process_GetTargetPosition(CCommand_VCS* p_pCommand, C
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lTargetPosition;
+    int lTargetPosition;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3351,7 +3351,7 @@ BOOL CGatewayDrive2ToEpos::Process_GetTargetVelocity(CCommand_VCS* p_pCommand, C
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lTargetVelocity = 0;
+    int lTargetVelocity = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -3464,7 +3464,7 @@ BOOL CGatewayDrive2ToEpos::Process_MoveWithVelocity(CCommand_VCS* p_pCommand, CD
     BOOL oResult(TRUE);
 
     BYTE ubNodeId(0);
-    long lTargetVelocity;
+    int lTargetVelocity;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -4501,7 +4501,7 @@ BOOL CGatewayDrive2ToEpos::Process_GetVelocityMust(CCommand_VCS* p_pCommand, CDe
     BOOL oResult = FALSE;
 
     BYTE ubNodeId(0);
-    long lVelocityMust = 0;
+    int lVelocityMust = 0;
     CErrorInfo errorInfo;
 
     if(p_pCommand)
@@ -4534,7 +4534,7 @@ BOOL CGatewayDrive2ToEpos::Process_SetVelocityMust(CCommand_VCS* p_pCommand, CDe
     BOOL oResult = FALSE;
 
     BYTE ubNodeId(0);
-    long lVelocityMust;
+    int lVelocityMust;
     CErrorInfo errorInfo;
 
     if(p_pCommand)

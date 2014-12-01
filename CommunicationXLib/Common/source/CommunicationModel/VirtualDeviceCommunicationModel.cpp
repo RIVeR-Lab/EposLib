@@ -439,7 +439,7 @@ template BOOL CVirtualDeviceCommunicationModel::GetObject(WORD p_usObjectIndex, 
 template BOOL CVirtualDeviceCommunicationModel::GetObject(WORD p_usObjectIndex, BYTE p_ubObjectSubIndex, BYTE* p_pData, DWORD* p_pulErrorCode, EAddressingMode p_AddressingMode);
 template BOOL CVirtualDeviceCommunicationModel::GetObject(WORD p_usObjectIndex, BYTE p_ubObjectSubIndex, short* p_pData, DWORD* p_pulErrorCode, EAddressingMode p_AddressingMode);
 template BOOL CVirtualDeviceCommunicationModel::GetObject(WORD p_usObjectIndex, BYTE p_ubObjectSubIndex, WORD* p_pData, DWORD* p_pulErrorCode, EAddressingMode p_AddressingMode);
-template BOOL CVirtualDeviceCommunicationModel::GetObject(WORD p_usObjectIndex, BYTE p_ubObjectSubIndex, long* p_pData, DWORD* p_pulErrorCode, EAddressingMode p_AddressingMode);
+template BOOL CVirtualDeviceCommunicationModel::GetObject(WORD p_usObjectIndex, BYTE p_ubObjectSubIndex, int* p_pData, DWORD* p_pulErrorCode, EAddressingMode p_AddressingMode);
 template BOOL CVirtualDeviceCommunicationModel::GetObject(WORD p_usObjectIndex, BYTE p_ubObjectSubIndex, DWORD* p_pData, DWORD* p_pulErrorCode, EAddressingMode p_AddressingMode);
 template BOOL CVirtualDeviceCommunicationModel::GetObject(WORD p_usObjectIndex, BYTE p_ubObjectSubIndex, __int64* p_pData, DWORD* p_pulErrorCode, EAddressingMode p_AddressingMode);
 
@@ -488,7 +488,7 @@ template BOOL CVirtualDeviceCommunicationModel::SetObject(WORD p_usObjectIndex, 
 template BOOL CVirtualDeviceCommunicationModel::SetObject(WORD p_usObjectIndex, BYTE p_ubObjectSubIndex, BYTE p_data, DWORD* p_pulErrorCode, EAddressingMode p_AddressingMode);
 template BOOL CVirtualDeviceCommunicationModel::SetObject(WORD p_usObjectIndex, BYTE p_ubObjectSubIndex, short p_data, DWORD* p_pulErrorCode, EAddressingMode p_AddressingMode);
 template BOOL CVirtualDeviceCommunicationModel::SetObject(WORD p_usObjectIndex, BYTE p_ubObjectSubIndex, WORD p_data, DWORD* p_pulErrorCode, EAddressingMode p_AddressingMode);
-template BOOL CVirtualDeviceCommunicationModel::SetObject(WORD p_usObjectIndex, BYTE p_ubObjectSubIndex, long p_data, DWORD* p_pulErrorCode, EAddressingMode p_AddressingMode);
+template BOOL CVirtualDeviceCommunicationModel::SetObject(WORD p_usObjectIndex, BYTE p_ubObjectSubIndex, int p_data, DWORD* p_pulErrorCode, EAddressingMode p_AddressingMode);
 template BOOL CVirtualDeviceCommunicationModel::SetObject(WORD p_usObjectIndex, BYTE p_ubObjectSubIndex, DWORD p_data, DWORD* p_pulErrorCode, EAddressingMode p_AddressingMode);
 template BOOL CVirtualDeviceCommunicationModel::SetObject(WORD p_usObjectIndex, BYTE p_ubObjectSubIndex, __int64 p_data, DWORD* p_pulErrorCode, EAddressingMode p_AddressingMode);
 

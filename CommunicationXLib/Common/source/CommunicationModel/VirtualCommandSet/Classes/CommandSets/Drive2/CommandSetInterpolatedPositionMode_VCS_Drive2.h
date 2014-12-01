@@ -16,7 +16,7 @@ public:
     BOOL VCS_GetIpmBufferParameter(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, WORD *p_pusUnderflowWarningLimit, WORD *p_pusOverflowWarningLimit, DWORD *p_pulMaxBufferSize, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_ClearIpmBuffer(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_GetFreeIpmBufferSize(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, DWORD *p_pulBufferSize, CErrorInfo* p_pErrorInfo = NULL);
-    BOOL VCS_AddPvtValueToIpmBuffer(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long p_lPosition, long p_lVelocity, BYTE p_ubTime, CErrorInfo* p_pErrorInfo = NULL);
+    BOOL VCS_AddPvtValueToIpmBuffer(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int p_lPosition, int p_lVelocity, BYTE p_ubTime, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_StartIpmTrajectory(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_StopIpmTrajectory(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, CErrorInfo* p_pErrorInfo = NULL);
     BOOL VCS_GetIpmStatus(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, BOOL* p_poTrajectoryRunning, BOOL* p_poIsUnderflowWarning, BOOL* p_poIsOverflowWarning, BOOL* p_poIsVelocityWarning, BOOL* p_poIsAccelerationWarning, BOOL *p_poIsUnderflowError, BOOL* p_poIsOverflowError, BOOL* p_poIsVelocityError, BOOL* p_poIsAccelerationError, CErrorInfo* p_pErrorInfo = NULL);

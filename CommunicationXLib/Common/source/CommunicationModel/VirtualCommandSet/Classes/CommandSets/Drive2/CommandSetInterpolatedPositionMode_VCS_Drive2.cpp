@@ -112,7 +112,7 @@ BOOL CCommandSetInterpolatedPositionMode_VCS_Drive2::VCS_GetFreeIpmBufferSize(CL
     return oResult;
 }
 
-BOOL CCommandSetInterpolatedPositionMode_VCS_Drive2::VCS_AddPvtValueToIpmBuffer(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, long p_lPosition, long p_lVelocity, BYTE p_ubTime, CErrorInfo* p_pErrorInfo)
+BOOL CCommandSetInterpolatedPositionMode_VCS_Drive2::VCS_AddPvtValueToIpmBuffer(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, int p_lPosition, int p_lVelocity, BYTE p_ubTime, CErrorInfo* p_pErrorInfo)
 {
     BOOL oResult = FALSE;
 

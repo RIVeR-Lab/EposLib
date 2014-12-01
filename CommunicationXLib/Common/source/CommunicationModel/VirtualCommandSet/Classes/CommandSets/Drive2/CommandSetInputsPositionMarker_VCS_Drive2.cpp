@@ -142,7 +142,7 @@ BOOL CCommandSetInputsPositionMarker_VCS_Drive2::VCS_ReadPositionMarkerCounter(C
     return oResult;
 }
 
-BOOL CCommandSetInputsPositionMarker_VCS_Drive2::VCS_ReadPositionMarkerCapturedPosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, WORD p_usCountIndex, long* p_plCapturedPosition, CErrorInfo* p_pErrorInfo)
+BOOL CCommandSetInputsPositionMarker_VCS_Drive2::VCS_ReadPositionMarkerCapturedPosition(CLayerManagerBase* p_pManager, HANDLE p_hHandle, HANDLE p_hTransactionHandle, WORD p_usCountIndex, int* p_plCapturedPosition, CErrorInfo* p_pErrorInfo)
 {
     BOOL oResult = FALSE;
 

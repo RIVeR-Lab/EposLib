@@ -507,7 +507,7 @@ BOOL CGatewayVCStoEpos::ReadInt16Object(CDeviceCommandSetManagerBase* pManager, 
     return FALSE;
 }
 
-BOOL CGatewayVCStoEpos::ReadInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, WORD wNodeId, WORD wIndex, WORD wSubIndex, long* plValue, CErrorInfo* pErrorInfo)
+BOOL CGatewayVCStoEpos::ReadInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, WORD wNodeId, WORD wIndex, WORD wSubIndex, int* plValue, CErrorInfo* pErrorInfo)
 {
     DWORD dNumberOfBytesRead;
 
@@ -747,7 +747,7 @@ BOOL CGatewayVCStoEpos::WriteInt16Object(CDeviceCommandSetManagerBase* pManager,
     return TRUE;
 }
 
-BOOL CGatewayVCStoEpos::WriteInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, WORD wNodeId, WORD wIndex, WORD wSubIndex, long lValue, CErrorInfo* pErrorInfo)
+BOOL CGatewayVCStoEpos::WriteInt32Object(CDeviceCommandSetManagerBase* pManager, HANDLE hDCS_Handle, HANDLE hTransactionHandle, WORD wNodeId, WORD wIndex, WORD wSubIndex, int lValue, CErrorInfo* pErrorInfo)
 {
     const BOOL oSignedDataType = TRUE;
     DWORD dNumberOfBytesWritten;

@@ -30,7 +30,7 @@ public:
 	BOOL GetRangeValues(CObjectEntry* pObjectEntry,void* pLowDataBuffer,DWORD dLowDataSize,void* pHighDataBuffer,DWORD dHighDataSize);
     BOOL CreateSafeGetVoidDataContainer(CObjectEntry* p_pObjectEntry, char p_cValue, void*& p_pVoidContainer, DWORD& p_rSizeOfVoidContainer, BOOL p_oShowMsg = TRUE);
     BOOL CreateSafeGetVoidDataContainer(CObjectEntry* p_pObjectEntry, short p_sValue, void*& p_pVoidContainer, DWORD& p_rSizeOfVoidContainer, BOOL p_oShowMsg = TRUE);
-    BOOL CreateSafeGetVoidDataContainer(CObjectEntry* p_pObjectEntry, long p_lValue, void*& p_pVoidContainer, DWORD& p_rSizeOfVoidContainer, BOOL p_oShowMsg = TRUE);
+    BOOL CreateSafeGetVoidDataContainer(CObjectEntry* p_pObjectEntry, int p_lValue, void*& p_pVoidContainer, DWORD& p_rSizeOfVoidContainer, BOOL p_oShowMsg = TRUE);
     BOOL CreateSafeGetVoidDataContainer(CObjectEntry* p_pObjectEntry, long long p_llValue, void*& p_pVoidContainer, DWORD& p_rSizeOfVoidContainer, BOOL p_oShowMsg = TRUE);
     BOOL CreateSafeGetVoidDataContainer(CObjectEntry* p_pObjectEntry, unsigned char p_ucValue, void*& p_pVoidContainer, DWORD& p_rSizeOfVoidContainer, BOOL p_oShowMsg = TRUE);
     BOOL CreateSafeGetVoidDataContainer(CObjectEntry* p_pObjectEntry, unsigned short p_usValue, void*& p_pVoidContainer, DWORD& p_rSizeOfVoidContainer, BOOL p_oShowMsg = TRUE);
