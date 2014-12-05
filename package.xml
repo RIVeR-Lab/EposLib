@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>EposLib</name>
+  <name>eposcmd</name>
   <version>0.0.0</version>
   <description>A catkin version of the EposCmd library</description>
   <url>http://wiki.ros.org/EposLib</url>
